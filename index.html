@@ -6,7 +6,829 @@
 </head>
 <body>
 
-  <!-- 你的程式碼 -->
+<div class="vm-box">
+
+<header class="vm-heading">
+
+<div class="vm-decoration">
+<span></span>
+<i>୨୧</i>
+<span></span>
+</div>
+
+<h2>Moments in Time</h2>
+<p>從晨光到世界盡頭</p>
+
+</header>
+
+<div class="vm-slider">
+
+<button
+class="vm-arrow vm-prev"
+type="button"
+aria-label="上一個時刻"
+>
+‹
+</button>
+
+<div class="vm-stage">
+
+<!-- 01 清晨 -->
+<article class="vm-slide active">
+
+<div class="vm-image">
+<img
+src="https://i.ibb.co/pj94nPKZ/Chi-Mo-An-gifwp-AA047-gif-A.gif"
+alt="清晨"
+>
+<span>01</span>
+</div>
+
+<div class="vm-copy">
+
+<small>MORNING</small>
+<h3>天光漫進窗邊</h3>
+
+<p>
+<em>如果可以</em>
+我想和你一起等天光漫進窗邊<br>
+在尚未完全甦醒的清晨裡<br>
+把平凡的日子過得緩慢一些
+</p>
+
+</div>
+
+</article>
+
+<!-- 02 黃昏 -->
+<article class="vm-slide">
+
+<div class="vm-image">
+<img
+src="https://i.ibb.co/pBRPnxgK/Chi-Mo-An-gifwp-AA047-gif-B.gif"
+alt="黃昏"
+>
+<span>02</span>
+</div>
+
+<div class="vm-copy">
+
+<small>SUNSET</small>
+<h3>落在肩上的餘暉</h3>
+
+<p>
+<em>如果可以</em>
+我想陪你坐在每一場將盡的夕陽裡<br>
+看餘暉落在彼此肩上<br>
+把還沒說完的話慢慢說完
+</p>
+
+</div>
+
+</article>
+
+<!-- 03 夜晚 -->
+<article class="vm-slide">
+
+<div class="vm-image">
+<img
+src="https://i.ibb.co/rDW1yLd/Chi-Mo-An-gifwp-AA047-gif-C.gif"
+alt="夜晚"
+>
+<span>03</span>
+</div>
+
+<div class="vm-copy">
+
+<small>MIDNIGHT</small>
+<h3>月色停在身側</h3>
+
+<p>
+<em>如果可以</em>
+我想與你共享每一個安靜的夜晚<br>
+任月色停在身側<br>
+也任我們在彼此的呼吸裡安然入夢
+</p>
+
+</div>
+
+</article>
+
+<!-- 04 末世 -->
+<article class="vm-slide">
+
+<div class="vm-image">
+<img
+src="https://i.ibb.co/hxsNFY3Z/Chi-Mo-An-gifwp-AA047-gif-D.gif"
+alt="末世"
+>
+<span>04</span>
+</div>
+
+<div class="vm-copy">
+
+<small>THE END</small>
+<h3>直到世界盡頭</h3>
+
+<p>
+<em>如果可以</em>
+即使有一天世界失去原本的模樣<br>
+我也想穿過混亂與餘燼走向你<br>
+直到最後一刻仍不鬆開你的手
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+<button
+class="vm-arrow vm-next"
+type="button"
+aria-label="下一個時刻"
+>
+›
+</button>
+
+</div>
+
+<div class="vm-footer">
+
+<div class="vm-dots">
+
+<button
+class="vm-dot active"
+type="button"
+data-index="0"
+aria-label="清晨"
+></button>
+
+<button
+class="vm-dot"
+type="button"
+data-index="1"
+aria-label="黃昏"
+></button>
+
+<button
+class="vm-dot"
+type="button"
+data-index="2"
+aria-label="夜晚"
+></button>
+
+<button
+class="vm-dot"
+type="button"
+data-index="3"
+aria-label="末世"
+></button>
+
+</div>
+
+<div class="vm-page">
+<span class="vm-current">01</span>
+<i>/</i>
+<span>04</span>
+</div>
+
+</div>
+
+</div>
+
+<style>
+.vm-box,
+.vm-box * {
+box-sizing: border-box;
+}
+
+/* =========================
+四時刻整體
+========================= */
+.vm-box {
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+
+width: min(640px, calc(100vw - 42px));
+margin: 0 auto 16px;
+padding: 20px 20px 18px;
+
+color: #f8ece8;
+background: #572f30;
+
+border: 1px solid rgba(238, 194, 192, 0.58);
+border-top: 0;
+
+outline: 1px solid rgba(238, 194, 192, 0.18);
+outline-offset: -7px;
+
+font-family:
+"Noto Serif TC",
+"Songti TC",
+"PMingLiU",
+serif;
+}
+
+.vm-box::before {
+content: "";
+position: absolute;
+top: 0;
+left: 20px;
+right: 20px;
+
+height: 1px;
+background: rgba(239, 199, 195, 0.22);
+}
+
+.vm-box::after {
+content: "୨୧";
+position: absolute;
+right: 19px;
+bottom: 7px;
+
+padding: 0 5px;
+
+color: #dca6a5;
+background: #572f30;
+
+font-size: 9px;
+line-height: 1;
+
+transform: translateY(50%);
+}
+
+/* =========================
+標題
+========================= */
+.vm-heading {
+margin-bottom: 16px;
+text-align: center;
+}
+
+.vm-decoration {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+
+margin-bottom: 5px;
+color: #d9a3a1;
+}
+
+.vm-decoration span {
+width: 27px;
+height: 1px;
+
+background: currentColor;
+opacity: 0.34;
+}
+
+.vm-decoration i {
+font-size: 7px;
+font-style: normal;
+}
+
+.vm-heading h2 {
+margin: 0;
+
+color: #faeae6;
+
+font-family:
+Georgia,
+"Times New Roman",
+serif;
+
+font-size: 17px;
+font-style: italic;
+font-weight: 400;
+letter-spacing: 0.08em;
+}
+
+.vm-heading p {
+margin: 4px 0 0;
+
+color: rgba(241, 214, 210, 0.57);
+
+font-size: 7px;
+letter-spacing: 0.18em;
+}
+
+/* =========================
+輪播
+========================= */
+.vm-slider {
+position: relative;
+
+display: grid;
+grid-template-columns:
+29px
+minmax(0, 1fr)
+29px;
+
+gap: 8px;
+align-items: center;
+}
+
+.vm-stage {
+position: relative;
+min-width: 0;
+
+touch-action: pan-y;
+}
+
+.vm-slide {
+display: none;
+
+grid-template-columns:
+minmax(255px, 1.1fr)
+minmax(175px, 0.9fr);
+
+gap: 19px;
+align-items: center;
+}
+
+.vm-slide.active {
+display: grid;
+animation: vmFade 0.3s ease;
+}
+
+@keyframes vmFade {
+from {
+opacity: 0;
+transform: translateX(5px);
+}
+
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+
+/* =========================
+圖片
+========================= */
+.vm-image {
+position: relative;
+
+width: 100%;
+aspect-ratio: 4 / 3;
+overflow: hidden;
+
+background: #442426;
+
+border: 1px solid rgba(246, 216, 211, 0.46);
+outline: 1px solid rgba(246, 216, 211, 0.15);
+outline-offset: -6px;
+}
+
+.vm-image img {
+width: 100%;
+height: 100%;
+display: block;
+
+object-fit: cover;
+object-position: center;
+
+pointer-events: none;
+user-select: none;
+-webkit-user-drag: none;
+}
+
+.vm-image > span {
+position: absolute;
+right: 10px;
+bottom: 8px;
+
+color: rgba(255, 244, 240, 0.9);
+
+font-family:
+Georgia,
+"Times New Roman",
+serif;
+
+font-size: 8px;
+letter-spacing: 0.13em;
+
+text-shadow:
+0 1px 5px rgba(45, 20, 20, 0.55);
+}
+
+/* =========================
+文字
+========================= */
+.vm-copy {
+padding: 5px 2px;
+text-align: left;
+}
+
+.vm-copy > small {
+color: #d19a98;
+
+font-family:
+Georgia,
+"Times New Roman",
+serif;
+
+font-size: 6px;
+letter-spacing: 0.25em;
+}
+
+.vm-copy h3 {
+margin: 6px 0 0;
+
+color: #fff1ed;
+
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.08em;
+}
+
+.vm-copy p {
+margin: 10px 0 0;
+
+color: rgba(250, 230, 226, 0.8);
+
+font-size: 9px;
+line-height: 1.86;
+letter-spacing: 0.01em;
+}
+
+.vm-copy p em {
+display: block;
+margin-bottom: 3px;
+
+color: #dfa8a5;
+
+font-family:
+Georgia,
+"Times New Roman",
+serif;
+
+font-size: 7px;
+font-style: italic;
+letter-spacing: 0.12em;
+}
+
+/* =========================
+左右按鈕
+========================= */
+.vm-arrow {
+position: relative;
+z-index: 20;
+
+width: 29px;
+height: 40px;
+padding: 0;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+color: rgba(244, 215, 211, 0.78);
+background: rgba(87, 47, 48, 0.95);
+
+border: 1px solid rgba(244, 215, 211, 0.24);
+cursor: pointer;
+
+font-family:
+Georgia,
+"Times New Roman",
+serif;
+
+font-size: 20px;
+line-height: 1;
+
+touch-action: manipulation;
+-webkit-tap-highlight-color: transparent;
+}
+
+.vm-arrow:hover,
+.vm-arrow:active {
+color: #fff2ef;
+background: #673839;
+border-color: rgba(244, 215, 211, 0.48);
+}
+
+/* =========================
+頁碼
+========================= */
+.vm-footer {
+margin-top: 13px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.vm-dots {
+display: flex;
+align-items: center;
+gap: 7px;
+}
+
+.vm-dot {
+width: 5px;
+height: 5px;
+min-width: 5px;
+padding: 0;
+
+background: transparent;
+border: 1px solid rgba(239, 204, 200, 0.48);
+border-radius: 50%;
+
+cursor: pointer;
+touch-action: manipulation;
+}
+
+.vm-dot.active {
+background: #dca5a2;
+}
+
+.vm-page {
+color: rgba(241, 213, 209, 0.58);
+
+font-family:
+Georgia,
+"Times New Roman",
+serif;
+
+font-size: 7px;
+letter-spacing: 0.13em;
+}
+
+.vm-page span:first-child {
+color: #f2d4d0;
+}
+
+.vm-page i {
+margin: 0 4px;
+font-style: normal;
+opacity: 0.48;
+}
+
+/* =========================
+手機版
+========================= */
+@media (max-width: 760px) {
+.vm-box {
+width: calc(100vw - 36px);
+margin: 0 auto 14px;
+padding: 18px 12px 16px;
+}
+
+.vm-box::before {
+left: 14px;
+right: 14px;
+}
+
+.vm-box::after {
+right: 15px;
+}
+
+.vm-heading {
+margin-bottom: 14px;
+}
+
+.vm-heading h2 {
+font-size: 16px;
+}
+
+.vm-heading p {
+font-size: 7px;
+}
+
+.vm-slider {
+grid-template-columns:
+25px
+minmax(0, 1fr)
+25px;
+
+gap: 4px;
+}
+
+.vm-slide {
+grid-template-columns: 1fr;
+gap: 11px;
+}
+
+.vm-image {
+width: 100%;
+max-width: 285px;
+margin: 0 auto;
+}
+
+.vm-copy {
+padding: 0 7px 2px;
+text-align: center;
+}
+
+.vm-copy > small {
+font-size: 6px;
+}
+
+.vm-copy h3 {
+margin-top: 5px;
+font-size: 13px;
+}
+
+.vm-copy p {
+margin-top: 8px;
+
+font-size: 8.5px;
+line-height: 1.82;
+}
+
+.vm-copy p em {
+font-size: 7px;
+}
+
+.vm-arrow {
+z-index: 30;
+
+width: 25px;
+height: 38px;
+
+font-size: 19px;
+}
+
+.vm-footer {
+margin-top: 11px;
+padding: 0 29px;
+}
+}
+
+@media (max-width: 420px) {
+.vm-box {
+width: calc(100vw - 30px);
+padding-left: 9px;
+padding-right: 9px;
+}
+
+.vm-slider {
+grid-template-columns:
+24px
+minmax(0, 1fr)
+24px;
+
+gap: 3px;
+}
+
+.vm-arrow {
+width: 24px;
+height: 37px;
+}
+
+.vm-image {
+max-width: 270px;
+}
+
+.vm-copy p {
+font-size: 8px;
+}
+
+.vm-footer {
+padding: 0 27px;
+}
+}
+</style>
+
+<script>
+(function () {
+var boxes =
+document.querySelectorAll(".vm-box");
+
+boxes.forEach(function (box) {
+var slides =
+Array.from(
+box.querySelectorAll(".vm-slide")
+);
+
+var dots =
+Array.from(
+box.querySelectorAll(".vm-dot")
+);
+
+var currentPage =
+box.querySelector(".vm-current");
+
+var previousButton =
+box.querySelector(".vm-prev");
+
+var nextButton =
+box.querySelector(".vm-next");
+
+var stage =
+box.querySelector(".vm-stage");
+
+var currentIndex = 0;
+var touchStartX = 0;
+var touchEndX = 0;
+
+function showSlide(newIndex) {
+if (newIndex < 0) {
+currentIndex =
+slides.length - 1;
+} else if (
+newIndex >= slides.length
+) {
+currentIndex = 0;
+} else {
+currentIndex = newIndex;
+}
+
+slides.forEach(
+function (slide, index) {
+slide.classList.toggle(
+"active",
+index === currentIndex
+);
+}
+);
+
+dots.forEach(
+function (dot, index) {
+dot.classList.toggle(
+"active",
+index === currentIndex
+);
+}
+);
+
+currentPage.textContent =
+String(currentIndex + 1)
+.padStart(2, "0");
+}
+
+previousButton.addEventListener(
+"click",
+function (event) {
+event.preventDefault();
+event.stopPropagation();
+
+showSlide(currentIndex - 1);
+}
+);
+
+nextButton.addEventListener(
+"click",
+function (event) {
+event.preventDefault();
+event.stopPropagation();
+
+showSlide(currentIndex + 1);
+}
+);
+
+dots.forEach(function (dot) {
+dot.addEventListener(
+"click",
+function (event) {
+event.preventDefault();
+
+showSlide(
+Number(dot.dataset.index)
+);
+}
+);
+});
+
+stage.addEventListener(
+"touchstart",
+function (event) {
+touchStartX =
+event.changedTouches[0].screenX;
+},
+{ passive: true }
+);
+
+stage.addEventListener(
+"touchend",
+function (event) {
+touchEndX =
+event.changedTouches[0].screenX;
+
+var distance =
+touchEndX - touchStartX;
+
+if (Math.abs(distance) < 40) {
+return;
+}
+
+if (distance < 0) {
+showSlide(currentIndex + 1);
+} else {
+showSlide(currentIndex - 1);
+}
+},
+{ passive: true }
+);
+
+showSlide(0);
+});
+})();
+</script>
 
 </body>
 </html>
